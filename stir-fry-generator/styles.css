@@ -6,23 +6,54 @@
     box-sizing: border-box;
 }
 
+.wrapper {
+    justify-content: center;
+    align-items: center;
+}
+
+.container1 {
+    max-height: 600px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #logo {
-    margin: 20px;
-    margin-left: 80px;
+    justify-content: flex-end;
+    padding: 1.5em;
     font-family: 'Roboto', sans-serif;
 }
 
 hr {
-    width: 270px;
+    max-width: 270px;
+}
+
+.backgroundBottom { 
+    background-color: #1f9ed4;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 150px;
 }
 
 #stirFryButton {
+    position: relative;
     background: #1f9ed4;
     width: 600px;
     height: 90px;
-    margin-top: 15px;
-    position: relative;
-    left: 25%;
     border: 3px solid #1f9ed4;
     border-radius: 4px;
     box-shadow: 0 10px 20px;
@@ -35,21 +66,14 @@ hr {
 
 #stirFryButton p {
     color: white;
-    font-size: 20px;
+    font-size: 1.8em;
     letter-spacing: .25em;
-}
-
-#dishNameDiv {
-    text-align: center;
-    margin-top: 20px; 
-    font-family: 'Lato', sans-serif;
-    font-size: 1.5em;
 }
 
 #eat {
     font-family: 'Lato', sans-serif;
     font-size: 1.5em;
-    margin-top: 55px;
+    padding: 1em;
     text-align: center;
     -webkit-animation: bounce 2s infinite;
     animation: bounce 2s infinite;
@@ -57,19 +81,54 @@ hr {
 
 @-webkit-keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
-      -webkit-transform: translateY(0); }
-    40% {
-      -webkit-transform: translateY(-30px); }
-    60% {
-      -webkit-transform: translateY(-15px); } }
+        -webkit-transform: translateY(0); }
+        40% {
+            -webkit-transform: translateY(-30px); }
+            60% {
+                -webkit-transform: translateY(-15px); } }
 
-.backgroundTop {
-    height: 50vh;
-    width: 100%;
+                
+#dishNameDiv {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+    padding: 1em;
 }
 
-.backgroundBottom {
-    background-color: #1f9ed4;
-    height: 50vh;
-    width: 100vw;
+
+@media(max-width: 768px) {
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #logo {
+        margin-top: 1em;
+        font-size: 1.25em;
+    }
+
+    #stirFryButton {
+        width: 300px;
+        padding: 1em;
+        margin-top: 50px;
+        margin-bottom: 1.25em;
+    }
+
+    #stirFryButton p {
+        font-size: 1.25em;
+    }
+
+    #dishNameDiv {
+        font-size: 14px;
+        margin-top: 1.25em;
+    }
+
+    .backgroundtop {
+        justify-content: center;
+        align-content: center;
+    }
+
 }
